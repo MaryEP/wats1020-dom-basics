@@ -3,11 +3,62 @@
 html {
     text-align: center;
     padding: 2em;
+    margin: 1em 10em 10em 10em;
     font-family: Arial, Helvetica, sans-serif;
+		border: lightcoral solid 3px;
+}
+
+img.fortuneteller {	
+	width: 200px;
+	height: auto;
+	display: inline-block;	
 }
 
 .fortune-cookie-saying-wrapper {
-    border: 1px solid #666;
-    padding: 1em;
+    border: red dashed 1px;
+    background-color: lightyellow;
+    display: inline-block;	
+    padding: .2em;
     margin: 1em;
+    font-size: 1.5em;
+}
+
+.generate-button {
+    background-color: lightcoral; 
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.generate-button:hover {
+    background-color: red;
+    color: white;
+}
+
+#previous-fortunes-container {
+  border: none;
+  list-style-type: none;
+  padding: 0.7;
+}
+.caution {
+    background-color: gray; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
 }

@@ -11,19 +11,40 @@
         <script type="text/javascript" src="fortune-cookie-generator.js"></script>
     </head>
     <body>
+      
         <h1>Fortune Cookie Generator</h1>
-        <p>Use this page to generate fortune cookie sayings.</p>
+      
+        <p>What's in store for you?</p>
+      
+      <img class="fortuneteller" src="image/fortune-teller-bird-sm.jpg" alt="picture of woman and bird"/>
+       
+      <br/>
+      
+      <!-- TODO: Make this button execute the `generateFortuneCookie() function. -->
+      
+        <button class="generate-button" onclick="generateFortuneCookie()">Click Here to Ask the Fortune Teller!</button>
+          
+        <br/>
+      
+      
         <div class="fortune-cookie-saying-wrapper">
-            <p id="fortune-cookie-text">Click the button to generate a saying.</p>
-        </div>
-        <!-- TODO: Make this button execute the `generateFortuneCookie()` function. -->
-        <button class="generate-button">
-            Make My Fortune!
-        </button>
-        <hr>
-        <h2>Previous Fortunes</h2>
+          
+          
+            <p id="fortune-cookie-text">You are fortunate.</p>
+    </div>
+      
+        
+        <h2>Previous Fortunes:</h2>
         <ul id="previous-fortunes-container">
+          
         <!-- TODO: Modify javascript so previously generated fortunes are listed here. -->
+          <li id=liFortuneList></li>
         </ul>
+      <div>
+        <button class="caution" onclick="caution()">small print</button>
+       
+      </div>
+ 
+  
     </body>
 </html>

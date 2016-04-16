@@ -1,40 +1,28 @@
-//////////////////////////////////////////////////////////////////
-//
-// Fortune Cookie Generator
-//
-//////////////////////////////////////////
-
+// Fortune Cookie Generator 
+/* (in html) Add an `onclick` attribute to the "Make My Fortune!" button so it 
+executes the `generateFortuneCookie()` function when it is clicked.
+  
+* In the `fortune-cookie-generator.js` create the logic to display a fortune:
+    * Select the `#fortune-cookie-text` element.
+    * Append the current text in the `#fortune-cookie-text` element as a list item (`li`) 
+    within the `#previous-fortunes-container` list.
+    * Select a random fortune cookie saying from the `fortunesList` Array.
+    * Replace the `innerText`(or innerHTML) of the `#fortune-cookie-text` element with the data 
+    you selected from `fortunesList`.
+* Make sure a fortune is generated each time the user clicks the button.
+*/
 var generateFortuneCookie = function() {
-    // This is where your code for the Fortune Cookie generator goes.
-    // You will use the fortunesList variable defined lower in this file
-    // to supply your fortune cookies with text.
-
-    // TODO: Grab the paragraph with the ID
-    // `fortune-cookie-text` to be able to insert text into that element.
-
-    // TODO: Update the Previous Fortunes list with the current `innerHTML`
-    // value of `#fortune-cookie-text`. Follow these steps:
+  
+  // TODO: Update Previous Fortunes list (usedFortunes) with current `innerHTML`value of 
+        //`#fortune-cookie-text`. 
         // 1. Create a new `li` element with the `document.createElement()` method.
-        // 2. Set the `innerHTML` of that element equal to the `innerHTML` of
-        //    the `#fortune-cookie-text` element.
-        // 3. Select the `#previous-fortunes-container` container and use
-        //    `appendChild()` to append the new `li` element you created above.
-        // 4. You should see the previous fortune cookie saying show up in the list.
-
-    // TODO: Select a new (random) fortune cookie saying from the data stored in the
-    // `fortunesList` variable. (HINT: You will use `Math.floor()` and
-    // `Math.random()` to accomplish this.) Use this data to update the
-    // `innerText` of the `#fortune-cookie-text` element.
-
-}
-
-// The following data list is provided for you to use in your code.
+        // 2. Set `innerHTML` of that element equal to the `innerHTML` of the 
+       //`#fortune-cookie-text` element.
+	//if((fortunesList.length) > 0) {
+	//var produceFortune = fortunesList[Math.floor(Math.random() * fortunesList.length)];
+	//produceFortune.textContent = newFortune;
+	//textContent=document.getElementByTagName(fortune-cookie-text).innerHTML;
 var fortunesList = [
-    "People are naturally attracted to you.",
-    "You learn from your mistakes... You will learn a lot today.",
-    "If you have something good in your life, don't let it go!",
-    "What ever you're goal is in life, embrace it visualize it, and for it will be yours.",
-    "Your shoes will make you happy today.",
     "You cannot love life until you live the life you love.",
     "Be on the lookout for coming events; They cast their shadows beforehand.",
     "Land is always on the mind of a flying bird.",
@@ -69,9 +57,9 @@ var fortunesList = [
     "You will travel to many exotic places in your lifetime.",
     "Your ability for accomplishment will follow with success.",
     "Nothing astonishes men so much as common sense and plain dealing.",
-    "Its amazing how much good you can do if you dont care who gets the credit.",
+    "It's amazing how much good you can do if you dont care who gets the credit.",
     "Everyone agrees. You are the best.",
-    "LIFE CONSISTS NOT IN HOLDING GOOD CARDS, BUT IN PLAYING THOSE YOU HOLD WELL.",
+    "Life consists not in holding good cards, but in playing those you hold well.",
     "Jealousy doesn't open doors, it closes them!",
     "It's better to be alone sometimes.",
     "When fear hurts you, conquer it and defeat it!",
@@ -80,5 +68,36 @@ var fortunesList = [
     "The man on the top of the mountain did not fall there.",
     "You will conquer obstacles to achieve success.",
     "Joys are often the shadows, cast by sorrows.",
-    "Fortune favors the brave."
-]
+    "Fortune favors the brave.",
+	];
+	
+var fortuneCookieText=document.getElementById("fortune-cookie-text");
+
+var liFortuneList = document.createElement('li');
+
+liFortuneList.innerText = fortuneCookieText.innerText;  
+	//document.getElementByTagName(liFortuneList).innerText = actualFortune.textContent
+	
+var usedFortunes = document.getElementById('previous-fortunes-container');
+	
+usedFortunes.appendChild(liFortuneList);
+	//object.appendchild(element to append)
+	//Select `#previous-fortunes-container`(usedFortunes) and use`appendChild(element)' 
+  //to add an html element to append `li` element created above.
+
+	fortuneCookieText.innerText=fortunesList[Math.floor(Math.random() * fortunesList.length)];
+}
+//document.getElementById('previous-fortunes-container').appendChild('usedFortunes').innerHTML;
+//or .appendChild(liFortuneList);
+	
+//var newFortune = fortunesList[Math.floor(Math.random() * fortunesList.length)];
+	//actualFortune.textContent = newFortune;
+
+ //document.getElementByClassName('generate-button').addEventListener('click', generateFortuneCookie()); 
+//function generateFortuneCookie() {
+      
+var caution = function() {
+alert ("Fortune Teller is not responsible for the fortune you receive, nor for any subsequent actions.");
+}
+
+
